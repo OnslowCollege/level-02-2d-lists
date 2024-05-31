@@ -1,0 +1,45 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "eamodio.gitlens",
+                "GitHub.vscode-pull-request-github",
+                "yzhang.markdown-all-in-one",
+                "usernamehw.errorlens",
+                "aaron-bond.better-comments",
+                "GitHub.github-vscode-theme"
+            ],
+            "settings": {
+                "gitlens.showWhatsNewAfterUpgrades": false,
+                "gitlens.showWelcomeOnInstall": false,
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pycodestyleEnabled": true,
+                "python.linting.pydocstyleEnabled": true,
+                "python.linting.pydocstyleArgs": [
+                    "--convention=pep257"
+                ],
+                "python.linting.mypyEnabled": true,
+                "python.linting.mypyArgs": [
+                    "--follow-imports=silent",
+                    "--ignore-missing-imports",
+                    "--show-column-numbers",
+                    "--no-pretty",
+                    "--strict"
+                ],
+                "workbench.colorTheme": "Default Dark+ Experimental",
+                "editor.wordWrap": "on",
+                "editor.fontSize": 16,
+                "editor.formatOnSave": true,
+                "editor.formatOnSaveMode": "modificationsIfAvailable",
+                "editor.formatOnType": true,
+                "window.menuBarVisibility": "classic"
+            }
+        }
+    },
+    "postCreateCommand": "python3 -m pip install -r requirements.txt",
+    "postStartCommand": "bash -c git remote set-url origin 'https://github.com/OnslowCollege/$(basename $(pwd))'"
+}
