@@ -1,45 +1,94 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "image": "ghcr.io/onslowcollege/pythontemplate:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },
     "customizations": {
         "vscode": {
             "extensions": [
                 "ms-python.python",
                 "ms-python.vscode-pylance",
+                "ms-python.mypy-type-checker",
+                "charliermarsh.ruff",
                 "eamodio.gitlens",
                 "GitHub.vscode-pull-request-github",
                 "yzhang.markdown-all-in-one",
+                "hediet.vscode-drawio",
+                "oderwat.indent-rainbow",
                 "usernamehw.errorlens",
                 "aaron-bond.better-comments",
-                "GitHub.github-vscode-theme"
+                "almenon.arepl",
+                "vsls-contrib.gitdoc",
+                "slightc.pip-manager",
+                "seunlanlege.action-buttons"
             ],
             "settings": {
-                "gitlens.showWhatsNewAfterUpgrades": false,
-                "gitlens.showWelcomeOnInstall": false,
-                "python.pythonPath": "/usr/local/bin/python",
-                "python.linting.enabled": true,
-                "python.linting.pycodestyleEnabled": true,
-                "python.linting.pydocstyleEnabled": true,
-                "python.linting.pydocstyleArgs": [
-                    "--convention=pep257"
-                ],
-                "python.linting.mypyEnabled": true,
-                "python.linting.mypyArgs": [
-                    "--follow-imports=silent",
-                    "--ignore-missing-imports",
-                    "--show-column-numbers",
-                    "--no-pretty",
-                    "--strict"
-                ],
-                "workbench.colorTheme": "Default Dark+ Experimental",
+                "AREPL.telemetry": false,
+                "AREPL.skipLandingPage": true,
+                "AREPL.showFooter": false,
                 "editor.wordWrap": "on",
                 "editor.fontSize": 16,
                 "editor.formatOnSave": true,
+                "editor.defaultFormatter": "charliermarsh.ruff",
                 "editor.formatOnSaveMode": "modificationsIfAvailable",
                 "editor.formatOnType": true,
-                "window.menuBarVisibility": "classic"
+                "editor.rulers": [
+                    80
+                ],
+                "editor.tokenColorCustomizations": {
+                    "textMateRules": [
+                        {
+                            "scope": "string.quoted.docstring.multi.python",
+                            "settings": {
+                                "fontStyle": "italic"
+                            }
+                        },
+                        {
+                            "scope": "comment",
+                            "settings": {
+                                "fontStyle": "italic"
+                            }
+                        }
+                    ]
+                },
+                "gitdoc.commitValidationLevel": "none",
+                "gitdoc.enabled": true,
+                "gitlens.showWhatsNewAfterUpgrades": false,
+                "gitlens.showWelcomeOnInstall": false,
+                "pip-manager.source": "pypi",
+                "python.pythonPath": "/usr/local/bin/python",
+                "ruff.importStrategy": "useBundled",
+                "workbench.colorTheme": "Default Light Modern",
+                "actionButtons": {
+                    "commands": [
+                        {
+                            "cwd": "${workspaceFolder}",
+                            "name": "$(run-all) Debug",
+                            "useVsCodeApi": true,
+                            "command": "workbench.action.debug.start"
+                        },
+                        {
+                            "cwd": "{workspaceFolder}",
+                            "name": "$(pencil) Format file",
+                            "useVsCodeApi": true,
+                            "command": "editor.action.formatDocument"
+                        },
+                        {
+                            "name": "$(terminal-view-icon) New Terminal",
+                            "useVsCodeApi": true,
+                            "command": "workbench.action.terminal.newInActiveWorkspace"
+                        },
+                        {
+                            "name": "$(terminal-kill) Kill all Terminals",
+                            "useVsCodeApi": true,
+                            "command": "workbench.action.terminal.killAll"
+                        }
+                    ],
+                    "defaultColor": "none",
+                    "reloadButton": "↻",
+                    "loadNpmCommands": false
+                }
             }
         }
-    },
-    "postCreateCommand": "python3 -m pip install -r requirements.txt",
-    "postStartCommand": "bash -c git remote set-url origin 'https://github.com/OnslowCollege/$(basename $(pwd))'"
+    }
 }
