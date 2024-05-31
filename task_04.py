@@ -1,3 +1,9 @@
+"""
+2D Lists.
+
+Task 4.
+"""
+
 from task_02 import days
 from task_03 import lang_names
 
@@ -13,3 +19,5 @@ from task_03 import lang_names
 #          5. Print out the corresponding word for the chosen day in
 #             the chosen language.
 
+# NOTE: There is no test associated with this task. Instead, take a screenshot
+#       of the output, upload it to Google Classroom, then turn it in.

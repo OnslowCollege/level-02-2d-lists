@@ -1,8 +1,7 @@
 """
-2D Lists Part 1.
+2D Lists.
 
-Created by: NAME
-Date: DATE
+Task 1.
 """
 
 from do_not_edit.task import days

@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "do_not_edit"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

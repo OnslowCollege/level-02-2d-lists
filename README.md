@@ -1,4 +1,4 @@
-# 12DTC: 2D Lists
+# Level 2 Programming: 2D Lists
 
 ## 🧠 Learning intentions
 
@@ -8,6 +8,18 @@ In this lesson, you will learn:
 2. How to create a 2D list
 3. How to access inner items in a 2D list
 4. How to manage inner lists within an outer list
+
+## 🏆 Success criteria
+
+You will know that you have completed the learning when:
+
+1. You have created at least **one** 2D list, containing at least one list.
+2. You have accessed at least **one** 2D list's inner lists.
+3. You have accessed at least **one** inner list item.
+4. You have passed the tests for **at least**:
+   - [``task_01.py``](task_01.py)
+   - [``task_02.py``](task_02.py)
+5. You have taken a screenshot of [``task_04.py``](task_04.py)'s output working properly.
 
 ## 📖 Lesson
 
@@ -99,17 +111,8 @@ duck_groups = duck_groups[-1] + ["Ma Beagle", "Mark Beaks"]
 
 ## 📝 Instructions
 
-Create a Python program in ``main.py`` and complete the tasks described in the comments. Write your code **below** the comments.
+Create a Python program (starting in ``task_01.py`` and ending in ``task_04.py``) that uses 2D lists.
 
-> Add your own comment above each function you create, describing what it does.
+Complete the tasks by writing your code **below** each set of comments.
 
-### Saving and committing
-
-1. For each program, save the file (press Ctrl-S or ⌘S).
-2. Click on the ▶️ Run Code button at the top-right to see if your code works. If not, fix the code and run it again.
-3. When the code works, you will need to commit and push your code so that it is saved:
-    - Click on the Source Control tab at the left
-    - In the Message box, type a brief message that explains what you have done (e.g. "Finished the program")
-    - Click on the Commit button
-    - Click on the Sync button
-4. When you have finished, let your kaiako know.
+Use the Tests tab to ensure your code works properly and meets the requirements of the tasks.
